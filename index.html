@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BKD scantable</title>
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+        <!-- styles for included libraries -->
+        <!-- chartist -->
+        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+        <!-- js needed in head -->
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js"></script>
+    </head>
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step">
+                <h4>
+                    <strong>2021-12-12</strong>
+                    <!--| <a href="#">ZOOM</a>-->
+                </h4>
+                <h4>
+                    <strong>BKD Erfassungstabellen</strong>
+                </h4>
+                <h2 class="down-100">Erfassung</h2>
+                <h3 class="red up-25">Scans der NLI Archivmappen</h3>
+                <h5 class="down-100"> Slides: <a href="https://digicademy.github.io/BKD_scantable"
+                        title="View the presentation online">
+                        https://digicademy.github.io/BKD_scantable </a>
+                </h5>
+                <h5>
+                    <strong><a href="#">Thomas Kollatz</a></strong> | <img
+                        src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
+                        class="twitter-icon" />
+                    <a href="https://twitter.com/digicademy" title="Digital Academy on Twitter"
+                        >@digicademy</a> | <img src="resources/img/Octicons-mark-github.svg"
+                        alt="Twitter" class="gh-icon" />
+                    <a href="https://github.com/digicademy/" title="Digital Academy on GitHub"
+                        >digicademy</a> | <a href="https://creativecommons.org/licenses/by/4.0/"
+                        >CC-BY 4.0</a>
+                </h5>
+            </div>
+            <div class="step" id="toc">
+                <h2 class="red">TOC</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five">
+                            <li>
+                                <a href="#basics">Grundsätzliches</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="six columns">
+                        <ul class="line-height-one-five">
+                            <li>
+                                <a href="#exeptions">Ausnahmen</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h2 class="red">Spalten</h2>
+                <div class="row">
+                    <div class="three columns">
+                        <ul>
+                            <li>
+                                <a href="#A">A</a>
+                            </li>
+                            <li>
+                                <a href="#B">B</a>
+                            </li>
+                            <li>
+                                <a href="#C">C</a>
+                            </li>
+                            <li>
+                                <a href="#D">D</a>
+                            </li>
+                            <li>
+                                <a href="#E">E</a>
+                            </li>
+                            <li>
+                                <a href="#F">F</a>
+                            </li>
+                            <li>
+                                <a href="#G">G</a>
+                            </li>
+                            <li>
+                                <a href="#H">H</a>
+                            </li>
+                            <li>
+                                <a href="#I">I</a>
+                            </li>
+                            <li>
+                                <a href="#J">J</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="three columns">
+                        <ul>
+                            <li>
+                                <a href="#K">K</a>
+                            </li>
+                            <li>
+                                <a href="#L">L</a>
+                            </li>
+                            <li>
+                                <a href="#M">M</a>
+                            </li>
+                            <li>
+                                <a href="#N">N</a>
+                            </li>
+                            <li>
+                                <a href="#O">O</a>
+                            </li>
+                            <li>
+                                <a href="#P">P</a>
+                            </li>
+                            <li>
+                                <a href="#Q">Q</a>
+                            </li>
+                            <li>
+                                <a href="#R">R</a>
+                            </li>
+                            <li>
+                                <a href="#S">S</a>
+                            </li>
+                            <li>
+                                <a href="#T">T</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="three columns">
+                        <ul>
+                            <li>
+                                <a href="#U">U</a>
+                            </li>
+                            <li>
+                                <a href="#V">V</a>
+                            </li>
+                            <li>
+                                <a href="#X">X</a>
+                            </li>
+                            <li>
+                                <a href="#Y">Y</a>
+                            </li>
+                            <li>
+                                <a href="#Z">Z</a>
+                            </li>
+                            <li>
+                                <a href="#AA">AA</a>
+                            </li>
+                            <li>
+                                <a href="#AB">AB</a>
+                            </li>
+                            <li>
+                                <a href="#AC">AC</a>
+                            </li>
+                            <li>
+                                <a href="#AD">AD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="basics">
+                <h2 class="red">Grundsätzliches</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="exeptions">
+                <h2 class="red">Ausnahmen</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="A">
+                <div class="row">
+                    <div class="six columns">
+                        <table>
+                            <tr>
+                                <th>A</th>
+                            </tr>
+                            <tr>
+                                <td>scan</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <pre><code class="linenumbers">2788215-10_0001
+2788215-10_0002
+2788215-10_0003
+2788215-10_0004
+2788215-10_0005
+2788215-10_0006
+2788215-10_0007
+</code>
+                            </pre>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="six columns">
+                        <p> Liste der scans <i>einer</i> Archivmappe </p>
+                    </div>
+                </div>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="B">
+                <table>
+                    <tr>
+                        <th>B</th>
+                    </tr>
+                    <tr>
+                        <td>scan no.</td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <div class="six columns">
+                        <dl class="small">
+                            <dt>Nummer</dt>
+                            <dd>
+                                <code>1-10</code>
+                            </dd>
+                            <dt>zum Objekt gehörende Beilage(n) </dt>
+                            <dd>
+                                <code>Beilage</code>
+                            </dd>
+                            <dt>Kennzeichnung einer Scan-Dublette</dt>
+                            <dd>
+                                <code>Dublette</code>
+                            </dd>
+                            <dt>Scan mit Farbkeil</dt>
+                            <dd>
+                                <code>Farbkeil</code>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="six columns">
+                        <dl class="small">
+                            <dt>Archivalia </dt>
+                            <dd><code>Archivreiter</code> Gliederungselement</dd>
+                            <dd><code>Archivmappe</code> Rückseite mit Boxnumber</dd>
+                            <dd>
+                                <code>Archivnotiz</code>
+                            </dd>
+                            <dt>Indexseiten (meist Margot Cohn)</dt>
+                            <dd>
+                                <code>Index</code>
+                            </dd>
+                            <dt>Sonstiges</dt>
+                            <dd>
+                                <code>Übersetzung</code>
+                            </dd>
+                            <dd>
+                                <code>Zusammenfassung</code>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <p class="x-small right">
+                    <a href="#B-example">Beispiele</a>
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="B-example">
+                <div class="row">
+                    <div class="three columns">
+                        <h3>Farbkeil</h3>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Farbkeil.png">
+                                <img src="resources/img/Farbkeil.png" alt="Farbkeil"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="x-small centered">2788215-10_0015</p>
+                    </div>
+                    <div class="three columns">
+                        <h3>Archivmappe</h3>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Archivmappe.png">
+                                <img src="resources/img/Archivmappe.png" alt="Archivmappe"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="x-small centered">2788215-10_0014</p>
+                    </div>
+                    <div class="three columns">
+                        <h3>Archivnotiz</h3>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Archivnotiz.png">
+                                <img src="resources/img/Archivnotiz.png" alt="Archivnotiz"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="x-small centered">2788215-10_0012</p>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Archivnotiz_b.png">
+                                <img src="resources/img/Archivnotiz_b.png" alt="Archivnotiz"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="x-small centered">2788215-10_0013</p>
+                    </div>
+                    <div class="three columns">
+                        <h3>Übersetzung</h3>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Uebersetzung.png">
+                                <img src="resources/img/Uebersetzung.png" alt="Uebersetzung"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="x-small centered">3152527-10_0006</p>
+                    </div>
+                </div>
+                <p class="x-small right up-50">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="C">
+                <div class="row">
+                    <div class="twalve columns">
+                        <table>
+                            <tr>
+                                <th colspan="2">C</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">type</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>A</code>
+                                </td>
+                                <td>Metadaten, Briefregest und Volltext</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>B</code>
+                                </td>
+                                <td>Metadaten und Briefregest</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>C</code>
+                                </td>
+                                <td>Metadaten</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="D">
+                <div class="row">
+                    <div class="six columns">
+                        <table class="small line-height-one">
+                            <tr>
+                                <th colspan="2">D</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">module</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>0</code>
+                                </td>
+                                <td>Keine Zuordnung</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>I</code>
+                                </td>
+                                <td>Jüdische Renaissance – Kulturzionismus – Palästina/Israel</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>II</code>
+                                </td>
+                                <td>Religion(en) und Religionswissenschaften</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>III</code>
+                                </td>
+                                <td>Dialogisches Denken – Religionsphilosophie</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>IV</code>
+                                </td>
+                                <td>Sprachphilosophie – Übersetzung – Bibelkommentar</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>V</code>
+                                </td>
+                                <td>Herausforderungen an das Christentum und kritischer Dialog mit christlicher Theologie</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    <div class="six columns">
+                        <table class="x-small line-height-one">
+                            <tr>
+                                <td>
+                                    <code>VI</code>
+                                </td>
+                                <td>Literatur – Kunst – Theater</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>VII</code>
+                                </td>
+                                <td>Politische Philosophie und Sozialphilosophie</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>VIII</code>
+                                </td>
+                                <td>Politische Anthropologie – Pädagogik – Psychologie/Psychotherapie</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">module-<strong>Kombinationen</strong></td>
+                            </tr>
+                           
+                            <tr>
+                                <td>
+                                    <code>I&amp;II</code>
+                                </td>
+                                <td>Modul I und Modul II</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>I,II</code>
+                                </td>
+                                <td>Modul I, Submodul II</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="E">
+                <h2 class="red">E</h2>
+                <p>leer</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="F">
+                <div class="row">
+                    <div class="twalve columns">
+                        <table>
+                            <tr>
+                                <th colspan="2">F</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">status</td>
+                            </tr>
+                            <tr>
+                                <td><code>original</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>photocopy</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><code>autopsie!!!</code></td>
+                                <td>Zuordnung nicht möglich</td>
+                            </tr>
+                        </table>
+                    </div></div>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="G">
+                <h2 class="red">sender_person</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="H">
+                <h2 class="red">sender_org</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="I">
+                <h2 class="red">send_place</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="J">
+                <h2 class="red">send_date</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="K">
+                <h2 class="red">receiver_person</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="L">
+                <h2 class="red">receiver_org</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="M">
+                <h2 class="red">receive_place</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="N">
+                <h2 class="red">objecttype</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="O">
+                <h2 class="red">mode</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="P">
+                <h2 class="red">language</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="Q">
+                <h2 class="red">pages</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="R">
+                <h2 class="red">sheets</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="S">
+                <h2 class="red">envelope</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="T">
+                <h2 class="red">hands</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="U">
+                <h2 class="red">keyword</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="V">
+                <h2 class="red">Buber-Biographica</h2>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="W">
+                <h2 class="red">W</h2>
+                <p>leer</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="X">
+                <h2 class="red">X</h2>
+                <p>BKD.ID</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="Y">
+                <h2 class="red">Y</h2>
+                <p>P.ID_sender</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+                    <div class="step" id="Z">
+                        <h2 class="red">Z</h2>
+                        <p>P.ID_receiver</p>
+                        <p class="x-small right">
+                            <a href="#toc">toc</a>
+                        </p>
+                    </div>
+            <div class="step" id="AA">
+                <h2 class="red">AA</h2>
+                <p>O.ID_sender</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="AB">
+                <h2 class="red">AB</h2>
+                <p>O.ID_receiver</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="AC">
+                <h2 class="red">AC</h2>
+                <p>K.ID_sender</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="AD">
+                <h2 class="red">AD</h2>
+                <p>K.ID_receiver</p>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <!--<div class="step" id="AE">
+                <h2 class="red">AE</h2>
+            </div> -->
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- chartist -->
+        <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+        <script src="resources/js/chartist.charts.js"></script>
+        <!-- codemirror -->
+        <script src="vendor/codemirror/lib/codemirror.js"></script>
+        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+                mode: "application/sparql-query",
+                matchBrackets: true,
+                lineNumbers: true,
+                viewportMargin: Infinity
+            });</script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+            var obj = impress();
+            obj.init();
+            initSlideNo(obj);</script>
+    </body>
+</html>
