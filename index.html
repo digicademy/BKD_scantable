@@ -49,7 +49,7 @@
         <div id="impress">
             <div class="step">
                 <h4>Stand: 
-                    <strong>2022-04-04</strong>
+                    <strong>2022-04-05</strong>
                     <!--| <a href="#">ZOOM</a>-->
                 </h4>
                 <h4>
@@ -713,9 +713,9 @@
             <div class="step" id="O">
                 <h2 class="red">O - mode</h2>
                 <ul class="line-height-one-five">
-                    <li><code>handwritten</code></li>
-                    <li><code>typed</code></li>
-                    <li><code>typed-handwritten</code> (nur wenn hs. Anteil größer als Korrekturen/Unterschrift)</li>
+                    <li><code>handwritten</code> Manuskript</li>
+                    <li><code>typed</code> Typoskript</li>
+                    <li><code>typed-handwritten</code> Typoskript mit handschriftlichen Zusätzen (nur wenn hs. Anteil größer als Korrekturen/ Unterschrift)</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -724,8 +724,8 @@
             <div class="step" id="P">
                 <h2 class="red">P - language</h2>
                 <ul class="line-height-one-five">
-                    <li>mehrere Sprachen durch <code>;</code> getrennt</li>
-                    <li>mehrere nur angeben, wenn umfangreicher als einzelne fremdsprachige Begriffe oder Redewendungen</li>
+                    <li>nach zweibuchstabigen <a href="https://de.wikipedia.org/wiki/Liste_der_ISO-639-1-Codes" target="blank">ISO-639-1</a>-Codes (<code>de</code>, <code>en</code>, <code>he</code>, ...)</li>
+                    <li>mehrere Sprachen durch <code>;</code> getrennt (nur wenn umfangreicher als einzelne fremdsprachige Begriffe oder Redewendungen)</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -734,9 +734,11 @@
             <div class="step" id="Q">
                 <h2 class="red">Q - pages</h2>
                 <ul class="line-height-one-five">
-                    <li>Zahl der <i>beschriebenen</i> Seiten</li>
+                    <li>Zahl der <i>mit Brieftext beschriebenen</i> Seiten</li>
+                    <li>(ehemals) gefaltete Doppelseiten werden entsprechend ihrer Verwendung gezählt</li>
                     </ul>
                 <p class="x-small right">
+                    <a href="#R-example">Beispiele</a>
                     <a href="#toc">toc</a>
                 </p>
             </div>
@@ -746,6 +748,67 @@
                     <li>Zahl der Blätter im Original (bei Fotokopien rekonstruieren wenn möglich)</li>
                 </ul>
                 <p class="x-small right">
+                    <a href="#R-example">Beispiele</a>
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="R-example">
+                <div class="row">
+                    <div class="three columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages.jpg">
+                                <img src="resources/img/Beispiel_pages.jpg" alt="1 Blatt, 2 Seiten"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages_2.jpg">
+                                <img src="resources/img/Beispiel_pages_2.jpg" alt="1 Blatt, 2 Seiten"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="small">1 Blatt, 2 Seiten</p>
+                    </div>
+                    <div class="three columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages_3.jpg">
+                                <img src="resources/img/Beispiel_pages_3.jpg" alt="1 Blatt, 1 Seite"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages_4.jpg">
+                                <img src="resources/img/Beispiel_pages_4.jpg" alt="1 Blatt, 1 Seite"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="small">1 Blatt, 1 Seite</p>
+                    </div>
+                    <div class="three columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages_5.jpg">
+                                <img src="resources/img/Beispiel_pages_5.jpg" alt="1 Blatt, 4 Seiten"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages_6.jpg">
+                                <img src="resources/img/Beispiel_pages_6.jpg" alt="1 Blatt, 4 Seiten"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                        <p class="small">1 Blatt, 4 Seiten</p>
+                    </div>
+                    <div class="three columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/Beispiel_pages_7.jpg">
+                                <img src="resources/img/Beispiel_pages_7.jpg" alt="1 Blatt, 4 Seiten"
+                                    style="width:20rem" />
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+                <p class="x-small right up-50">
                     <a href="#toc">toc</a>
                 </p>
             </div>
@@ -760,6 +823,9 @@
             </div>
             <div class="step" id="T">
                 <h2 class="red">T - hands</h2>
+                <ul class="line-height-one-five">
+                    <li>Zahl der <i>Schreiber</i>hände <br/>Typoskript mit eigenhändiger Unterschrift = <code>1 scribe</code><br/>hs. von Sekretär geschriebener Brief mit eigenhändiger Unterschrift des Absenders = <code>2 scribes</code></li>
+                </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
                 </p>
@@ -777,7 +843,7 @@
             <div class="step" id="V">
                 <h2 class="red">V - Buber-Biographica</h2>
                 <ul class="line-height-one-five">
-                    <li>Informationen für <i>virtuelles Tagebuch</i>: mehr oder weniger datierbare - geplante oder stattgefundene - Ereignisse, die Buber in sein Tagebuch notiert hätte</li>
+                    <li>Informationen für <i>virtuelles Tagebuch</i>: mehr oder weniger datierbare – geplante oder stattgefundene – Ereignisse, die Buber in sein Tagebuch notieren hätte können</li>
                     <li>nicht normiert, aber wenn möglich in der Form <code>Datumsangabe: Ereignis</code> <br/>Bsp. 1907-12-29: Vortrag "Konferenz für das arbeitende Palästina"</li>
                 </ul>
                 <p class="x-small right">
@@ -797,7 +863,7 @@
             <div class="step" id="X">
                 <h2 class="red">X - BKD.ID</h2>
                 <ul class="line-height-one-five">
-                    <li><code>BKD-ID</code> in <a href="https://seafile.rlp.net/smart-link/8e0e9b83-c62e-4050-b863-0415741aab68/">Korrespondenzliste_gesamt</a> recherchieren und einmalig oben eintragen (betrifft nicht die Allgemeine und Verlagskorrespondenz!)</li>
+                    <li><code>BKD-ID</code> in <a href="https://seafile.rlp.net/smart-link/8e0e9b83-c62e-4050-b863-0415741aab68/">Korrespondenzliste_gesamt</a> recherchieren und <i>einmalig</i> oben eintragen (betrifft nicht die Allgemeine und Verlagskorrespondenz!)</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
