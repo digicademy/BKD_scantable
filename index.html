@@ -307,7 +307,7 @@
                             <dd>
                                 <code>1-10</code> nur für Briefe, nicht Beilagen etc.
                             </dd>
-                            <dd><code>Entwurf-1-8</code> mit Seitenzahl</dd>
+                            <dd><code>Entwurf-1-8</code>, sh. <a href="#B-draft">Entwurf</a></dd>
                             
                             <dt>zum Objekt gehörende Beilage(n) </dt>
                             <dd>
@@ -425,8 +425,8 @@
                 <h2 class="red">B - Sonderfall "Entwurf"</h2>
                 <ul class="line-height-one-five">
                     <li>Nummerierung der Seiten über <code>Entwurf-1</code> bis <code>Entwurf-8</code></li>
-                    <li>wenn auch der <em>abgesandte Brief überliefert</em> ist: Verweis über Spalte E "corresp", restliche Felder leer lassen</li>
-                    <li>wenn <em>nur Entwurf</em> überliefert ist: Spalte E leer lassen, restliche Felder ausfüllen wie bei abgesandtem Brief</li>
+                    <li>wenn auch der <strong>abgesandte Brief überliefert</strong> ist: Verweis über Spalte E "corresp", restliche Felder leer lassen</li>
+                    <li>wenn <strong>nur Entwurf</strong> überliefert ist: Spalte E leer lassen, restliche Felder ausfüllen wie bei abgesandtem Brief</li>
                 </ul>
                 <p class="x-small right up-50">
                     <a href="#toc">toc</a>
@@ -856,7 +856,7 @@
                 <h2 class="red">W - notes</h2>
                 <ul class="line-height-one-five">
                     <li>sonstige Anmerkungen zu Form oder Inhalt</li>
-                    <li>wird im xml-Dokument als <code>&lt;note type="intern"&gt;</code> ausgegeben und dort nachbearbeitet (z.B. zu Regest oder Beilage)</li>
+                    <li>wird im xml-Dokument in einer <code>&lt;list type="internalNote"&gt;</code> ausgegeben und dort nachbearbeitet (z.B. zu Regest oder Beilage)</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -880,9 +880,10 @@
             <div class="step" id="Y">
                 <h2 class="red">Y - hand mode</h2>
                 <ul class="line-height-one-five">
-                    <li>im Regelfall, d.h. bei Verwendung von lateinischer Kursivschrift, <strong>leer lassen</strong>!</li>
+                    <li>im Regelfall, d.h. bei lateinischer Kursivschrift (<code>latintype</code>), <strong>leer lassen</strong>!</li>
                     <li>Sütterlin oder andere deutsche Kurrentschrift: <code>kurrent</code></li>
                     <li>Gabelsberger oder andere stenographische Kurzschrift: <code>shorthand</code></li>
+                    <li>zwei Schreiber mit unterschiedlichen <em>hand modes</em>: <code>Schrift des major-scribes; Schrift des minor-scribes</code> <br/>(Bsp. <code>kurrent; latintype</code>)</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
