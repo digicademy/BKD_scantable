@@ -216,7 +216,7 @@
                                 <figure class="mfp-lightbox"><a
                                         href="resources/img/Beispiel_grundsaetzliches.png"><img
                                             src="resources/img/Beispiel_grundsaetzliches.png"
-                                            alt="Beispiel für Eintrag"></a></figure>
+                                            alt="Beispiel für Eintrag"/></a></figure>
                             </div></div>
                     </li>
                 </ul>
@@ -345,20 +345,13 @@
                             </dd>
                             <dt>Archivalia und Sonstiges</dt>
                             <dd><code>Archivreiter</code> Gliederungselement</dd>
-                            <dd><code>Archivmappe</code> mit Boxnumber</dd>
-                            <dd>
-                                <code>Archivnotiz</code>
-                            </dd>
+                            <dd><code>Archivmappe</code> | <code>Archivnotiz</code></dd>
                             <dd><code>Archivkorrespondenz</code></dd>
-                            <dd>
-                                <code>Index</code> (idR Margot Cohn)
-                            </dd>
-                            <dd>
-                                <code>Übersetzung</code> | <code>Zusammenfassung</code>
-                            </dd>
-                            <dd>
-                                <code>Notiz dritter Hand</code> | <code>Sonstiges</code>
-                            </dd> 
+                            <dd><code>Index</code> (idR Margot Cohn)</dd>
+                            <dd><code>Übersetzung</code> > Zuordnung über <span class="highlight"
+                                >corresp</span></dd>
+                            <dd><code>Zusammenfassung</code> | <code>Notiz dritter Hand</code></dd>
+                            <dd><code>Sonstiges</code></dd> 
                             </dl>
                     </div>
                 </div>
@@ -424,6 +417,7 @@
             <div class="step" id="B-draft">
                 <h2 class="red">B - Sonderfall "Entwurf"</h2>
                 <ul class="line-height-one-five">
+                    <li>Brief, der sich (potentiell) vom <em>abgesandten Brief</em> unterscheidet; liegt meistens vor, wenn es keine Unterschrift gibt!</li>
                     <li>Nummerierung der Seiten über <code>Entwurf-1</code> bis <code>Entwurf-8</code></li>
                     <li>wenn auch der <strong>abgesandte Brief überliefert</strong> ist: Verweis über Spalte E "corresp", restliche Felder leer lassen</li>
                     <li>wenn <strong>nur Entwurf</strong> überliefert ist: Spalte E leer lassen, restliche Felder ausfüllen wie bei abgesandtem Brief</li>
@@ -559,7 +553,7 @@
             <div class="step" id="E">
                 <h2 class="red">E - corresp</h2>
                 <ul class="line-height-one-five">
-                    <li>für Verweiseinträge / Zuordnungen zu Briefen, wenn Spalte B: <br/><code>Beilage</code>, <code>Briefumschlag Vorderseite</code>, <code>Briefumschlag Rückseite</code> (!), <code>Dublette</code>, <code>Reproduktion</code>, <code>Abschrift dritter Hand</code> oder <code>Farbkeil</code>
+                    <li>für Verweiseinträge / Zuordnungen zu Briefen, wenn Spalte B: <br/><code>Beilage</code>, <code>Briefumschlag Vorderseite</code>, <code>Briefumschlag Rückseite</code> (!), <code>Dublette</code>, <code>Reproduktion</code>, <code>Abschrift dritter Hand</code>, <code>Übersetzung</code> oder <code>Farbkeil</code></li>
                     <li>Angabe der <i>ersten</i> Scanseite des zugehörigen Korrespondenzstücks</li>
                     <li>gegebenenfalls ergänzen um <code>_?</code> für unsichere Angaben</li>
                 </ul>
@@ -826,7 +820,13 @@
             <div class="step" id="T">
                 <h2 class="red">T - hands</h2>
                 <ul class="line-height-one-five">
-                    <li>Zahl der <i>Schreiber</i>hände <br/>Typoskript mit eigenhändiger Unterschrift = <code>1 scribe</code><br/>hs. von Sekretär geschriebener Brief mit eigenhändiger Unterschrift des Absenders = <code>2 scribes</code></li>
+                    <li>Zahl der <i>Schreiber</i>hände 
+                        <ul class="line-height-one-five">
+                            <li>Typoskript mit eigenhändiger Unterschrift = <code>1 scribe</code></li>
+                            <li>hs. von Sekretär geschriebener Brief mit eigenhändiger Unterschrift des Absenders = <code>2 scribes</code></li>
+                            <li>maschinenschriftlicher Briefentwurf ohne Unterschrift = <code>0 scribes</code></li>
+                        </ul>
+                    </li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -865,7 +865,7 @@
             <div class="step" id="X">
                 <h2 class="red">X - BKD.ID</h2>
                 <ul class="line-height-one-five">
-                    <li><code>BKD-ID</code> in <a href="https://seafile.rlp.net/smart-link/8e0e9b83-c62e-4050-b863-0415741aab68/">Korrespondenzliste_gesamt</a> recherchieren und <i>einmalig</i> oben eintragen (betrifft nicht die Allgemeine und Verlagskorrespondenz!)</li>
+                    <li><code>BKD-ID</code> in <a href="https://seafile.rlp.net/smart-link/8e0e9b83-c62e-4050-b863-0415741aab68/">Korrespondenzliste_gesamt</a> recherchieren und <i>einmalig</i> in erste Zeile eintragen (betrifft nicht die Allgemeine und Verlagskorrespondenz!)</li>
                     <li>bei ID-Wechsel (wenn Briefe aus anderen Korrespondenzen beiliegen) muss auch der "<i>Rück-</i>Wechsel" angegeben werden:</li>
                 </ul>
                 <figure class="mfp-lightbox even-left">
