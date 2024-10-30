@@ -201,6 +201,9 @@
                             <li>
                                 <a href="#Y">Y – hand mode</a>
                             </li>
+                            <li>
+                                <a href="#Z">Z – Regest</a>
+                            </li>
                             
                         </ul>
                     </div>
@@ -836,7 +839,7 @@
                 </p>
             </div>
             <div class="step" id="U">
-                <h2 class="red">U - keywords</h2>
+                <h2 class="red">U - keywords (OPTIONAL)</h2>
                 <ul class="line-height-one-five">
                     <li>Schlagwörter, die bereits in <a href="https://seafile.rlp.net/smart-link/a6dd39f3-9973-470a-a646-712a412b1f38/" target="blank">S_ids</a> vorkommen oder dort vorkommen sollen (so gemachte "Vorschläge" werden später gesammelt evaluiert und systematisiert)</li>
                     <li><i>kein</i> Anspruch auf Vollständigkeit, sondern Hilfestellung zum Anlegen einer relevanten Schlagwortdatei!</li>
@@ -846,7 +849,7 @@
                 </p>
             </div>
             <div class="step" id="V">
-                <h2 class="red">V - Buber-Biographica</h2>
+                <h2 class="red">V - Buber-Biographica (OPTIONAL)</h2>
                 <ul class="line-height-one-five">
                     <li>Informationen für <i>virtuelles Tagebuch</i>: mehr oder weniger datierbare – geplante oder stattgefundene – Ereignisse, die Buber in sein Tagebuch notieren hätte können</li>
                     <li>nicht normiert, aber wenn möglich in der Form <code>Datumsangabe: Ereignis</code> <br/>Bsp.:<br/> <code>1907-12-29: Vortrag "Konferenz für das arbeitende Palästina"</code> <br/><code>1935-03-31 bis 1935-04-22: geplante Reise nach Palästina</code></li>
@@ -856,7 +859,7 @@
                 </p>
             </div>
             <div class="step" id="W">
-                <h2 class="red">W - notes</h2>
+                <h2 class="red">W - notes (OPTIONAL)</h2>
                 <ul class="line-height-one-five">
                     <li>sonstige Anmerkungen zu Form oder Inhalt</li>
                     <li>wird im xml-Dokument in einer <code>&lt;list type="internalNote"&gt;</code> ausgegeben und dort nachbearbeitet (z.B. zu Regest oder Beilage)</li>
@@ -892,15 +895,18 @@
                     <a href="#toc">toc</a>
                 </p>
             </div>
-            <!--<div class="step" id="Z">
-                <h2 class="red">Z</h2>
-                <p>P.ID_receiver</p>
-                <p>wird i.d.R. aus Dropdown-Eintrag automatisch ermittelt und zugeordnet</p>
+            <div class="step" id="Z">
+                <h2 class="red">Z - Regest (OPTIONAL)</h2>
+                <ul class="line-height-one-five">
+                    <li>vollständiges Regest zum Brief, wie es in &lt;list type="content"&gt; erscheinen soll</li>
+                    <li>thematisch unterschiedliche Einträge (= unterschiedliche <code>items</code>) werden durch <code>;</code> getrennt, ein Eintrag kann auch aus mehreren Sätzen bestehen</li>
+                    <li>Schema: <code>Sender</code> <code>Verb</code> <code>Empfänger</code> <code>...</code> <br/>Bsp. <code>Buber informiert Herzl über ...</code> </li>
+                </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
                 </p>
             </div>
-            <div class="step" id="AA">
+            <!--<div class="step" id="AA">
                 <h2 class="red">AA</h2>
                 <p>O.ID_sender</p>
                 <p>wird i.d.R. aus Dropdown-Eintrag automatisch ermittelt und zugeordnet</p>
