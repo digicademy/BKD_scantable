@@ -49,7 +49,7 @@
         <div id="impress">
             <div class="step">
                 <h4>Stand: 
-                    <strong>2022-04-05</strong>
+                    <strong>2025-04-07</strong>
                     <!--| <a href="#">ZOOM</a>-->
                 </h4>
                 <h4>
@@ -295,6 +295,7 @@
                     </div>
                     <div class="six columns">
                         <p> Liste der scans <i>einer</i> Archivmappe </p>
+                        <p class="small">- wird extrahiert aus <code>.html</code>-Datei einer Mappe: <br/><ref target="https://adwmainz.pages.gitlab.rlp.net/digicademy/bkd/correspondences/tables/archivmappen.html">BKD Archivmappen</ref> -> Klick auf Mappe -> Klick auf <code>[Mappennummer].html</code> -> "lokal öffnen" -> copy&amp;paste</p>
                     </div>
                 </div>
                 <p class="x-small right">
@@ -658,7 +659,7 @@
                     <li>gegebenenfalls ergänzen um <code>_e</code> / <code>_?</code> für erschlossene oder unsichere Angaben</li>
                     <li>ist ein Brief nicht datiert, sollte das Datum wenn möglich mit <code>_nB</code> (notBefore) und/oder <code>_nA</code> (notAfter) eingegrenzt werden 
                         <br/>Bsp. <code>1918-07-10_nB; 1918-07-26_nA</code></li>
-                    <li>ist ein Brief an mehreren Tagen geschrieben, wird das 'Hauptdatum' erfasst und ein Vermerk in Spalte W vorgenommen</li>
+                    <li>ist ein Brief an mehreren Tagen geschrieben, wird das späteste Datum erfasst und ein Vermerk in Spalte W vorgenommen</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -701,12 +702,17 @@
                 <h2 class="red">N - objecttype</h2>
                 <code>Brief</code>
                 <code>Postkarte</code>
+                <code>Bildpostkarte</code>
                 <code>Luftpostbrief</code>
                 <code>Telegramm</code>
+                <code>Rohrpost</code>
                 <code>Drucksache</code>
                 <code>Visitenkarte</code>
                 <code>Feldpostkarte</code>
                 <code>Feldpostbrief</code>
+                <code>Vertrag</code>
+                <code>Beleg</code>
+                <code>Offener Brief</code>
                 <code>other</code> 
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -718,6 +724,9 @@
                     <li><code>handwritten</code> Manuskript</li>
                     <li><code>typed</code> Typoskript</li>
                     <li><code>typed-handwritten</code> Typoskript mit handschriftlichen Zusätzen (nur wenn hs. Anteil größer als Korrekturen/Unterschrift)</li>
+                    <li><code>printed</code> Druck</li>
+                    <li><code>printed-handwritten</code> Druck mit handschriftlichen Zusätzen</li>
+                    <li><code>printed-typed</code> Druck mit maschinenschriftlichen Zusätzen</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -817,6 +826,7 @@
             <div class="step" id="S">
                 <h2 class="red">S - envelope</h2>
                 <ul class="line-height-one-five">
+                    <li>Ist ein Umschlag überliefert?</li>
                     <li>bei objecttype <code>Luftpostbrief</code> hat <code>envelope</code> den Wert <code>0 – Kein Umschlag</code></li>
                 </ul>
                 <p class="x-small right">
@@ -826,10 +836,10 @@
             <div class="step" id="T">
                 <h2 class="red">T - hands</h2>
                 <ul class="line-height-one-five">
-                    <li>Zahl der <i>Schreiber</i>hände 
+                    <li>Zahl der <i>Schreiber:innen</i>hände 
                         <ul class="line-height-one-five">
                             <li>Typoskript mit eigenhändiger Unterschrift = <code>1 scribe</code></li>
-                            <li>hs. von Sekretär geschriebener Brief mit eigenhändiger Unterschrift des Absenders = <code>2 scribes</code></li>
+                            <li>hs. von Sekretär:in geschriebener Brief mit eigenhändiger Unterschrift des Absenders = <code>2 scribes</code></li>
                             <li>maschinenschriftlicher Briefentwurf ohne Unterschrift = <code>0 scribes</code></li>
                         </ul>
                     </li>
@@ -862,7 +872,7 @@
                 <h2 class="red">W - notes (OPTIONAL)</h2>
                 <ul class="line-height-one-five">
                     <li>sonstige Anmerkungen zu Form oder Inhalt</li>
-                    <li>wird im xml-Dokument in einer <code>&lt;list type="internalNote"&gt;</code> ausgegeben und dort nachbearbeitet (z.B. zu Regest oder Beilage)</li>
+                    <li>wird im xml-Dokument in einer <code>&lt;note type="internal"&gt;</code> ausgegeben und dort nachbearbeitet (z.B. zu Regest oder Beilage)</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
