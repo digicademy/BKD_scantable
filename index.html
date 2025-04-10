@@ -694,10 +694,28 @@
                 <h2 class="red">J - send_date</h2>
                 <ul class="line-height-one-five">
                     <li>Erfassung nach ISO-Norm im Format <code>yyyy-mm-dd</code></li>
-                    <li>gegebenenfalls ergänzen um <code>_e</code> / <code>_?</code> für erschlossene oder unsichere Angaben</li>
+                    <li>gegebenenfalls ergänzen um <code>_e</code> / <code>_?</code> für erschlossene oder unsichere Angaben</li> 
                     <li>ist ein Brief nicht datiert, sollte das Datum wenn möglich mit <code>_nB</code> (notBefore) und/oder <code>_nA</code> (notAfter) eingegrenzt werden 
                         <br/>Bsp. <code>1918-07-10_nB; 1918-07-26_nA</code></li>
-                    <li>ist ein Brief an mehreren Tagen geschrieben, wird das späteste Datum erfasst und ein Vermerk in Spalte W vorgenommen</li>
+                    <li>ist ein Brief <em>an mehreren Tagen</em> geschrieben, wird das späteste Datum erfasst und ein Vermerk in Spalte W vorgenommen</li>
+                </ul>
+                <p class="x-small right">
+                    <a href="#toc">toc</a>
+                </p>
+            </div>
+            <div class="step" id="J">
+                <h2 class="red">J - send_date (II)</h2>
+                <ul class="line-height-one-five">
+                    <li>ist ein Brief zusätzlich oder ausschließlich nach einem <em>nicht-gregorianischen Kalender</em> datiert, wird das Datum jedenfalls in den gregorianischen Kalender umgerechnet und im Format <code>yyyy-mm-dd</code> notiert, ergänzt durch: 
+                        <ul class="small">
+                            <li><code>_he</code> (= nur jüd. Kalender)</li>
+                            <li><code>_heg</code> (= jüd. und gregor. Kalender)</li>
+                            <li><code>_hej</code> (= jüd. und jul. Kalender)</li>
+                            <li><code>_gj</code> (= gregor. und jul. Kalender)</li>
+                            <li><code>_ju</code> (= nur jul. Kalender)</li>
+                        </ul>
+                    </li>          
+                    <li>das nicht-gregorianische Datum sollte zusätzlich in der Spalte <a href="#W">W - notes</a> festgehalten werden</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
