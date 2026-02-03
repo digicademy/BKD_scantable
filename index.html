@@ -673,7 +673,7 @@
                 <h2 class="red">H - sender_org</h2>
                 <ul class="line-height-one-five">
                     <li>vom Briefpapier erfasst werden nur Organisationen, die auch als Absender fungieren</li>
-                    <li>Erfassung nach Vorlage, die Einträge werden später nachbearbeitet und systematisiert</li>
+                    <li>Organisationen, die nicht im Drop-Down hinterlegt sind: Erfassung nach Vorlage, die Einträge werden später nachbearbeitet und systematisiert</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -736,7 +736,7 @@
                 <h2 class="red">L - receiver_org</h2>
                 <ul class="line-height-one-five">
                     <li>nur Organisationen, die auch als Empfänger adressiert werden</li>
-                    <li>Erfassung nach Vorlage, die Einträge werden später nachbearbeitet und systematisiert</li>
+                    <li>Organisationen, die nicht im Drop-Down hinterlegt sind: Erfassung nach Vorlage, die Einträge werden später nachbearbeitet und systematisiert</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -783,6 +783,8 @@
                     <li><code>printed</code> Druck</li>
                     <li><code>printed-handwritten</code> Druck mit handschriftlichen Zusätzen</li>
                     <li><code>printed-typed</code> Druck mit maschinenschriftlichen Zusätzen</li>
+                    <li><code>typed_carbon</code> Typoskript-Durchschlag</li>
+                    <li><code>typed_carbon-handwritten</code> Typoskript-Durchschlag mit handschriftlichen Zusätzen</li>
                 </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
@@ -972,15 +974,17 @@
                     <a href="#toc">toc</a>
                 </p>
             </div>
-            <!--<div class="step" id="AA">
-                <h2 class="red">AA</h2>
-                <p>O.ID_sender</p>
-                <p>wird i.d.R. aus Dropdown-Eintrag automatisch ermittelt und zugeordnet</p>
+            <div class="step" id="AA">
+                <h2 class="red">AA - Briefpapier (OPTIONAL)</h2>
+                <ul class="line-height-one-five">
+                    <li>falls der Brief auf Briefpapier einer Person oder Organisation geschrieben ist, wird hier der Name hinterlegt</li>
+                    <li>wichtig: die Schreibung orientiert sich an den BKD-Registern, nicht an der Vorlage! <br/>=> am besten copy&amp;paste aus Spalte <code>sender_person</code> oder <code>sender_org</code></li>
+                </ul>
                 <p class="x-small right">
                     <a href="#toc">toc</a>
                 </p>
             </div>
-            <div class="step" id="AB">
+            <!--<<div class="step" id="AB">
                 <h2 class="red">AB</h2>
                 <p>O.ID_receiver</p>
                 <p>wird i.d.R. aus Dropdown-Eintrag automatisch ermittelt und zugeordnet</p>
