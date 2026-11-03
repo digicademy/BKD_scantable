@@ -741,6 +741,8 @@
                 <ul class="line-height-one-five">
                     <li>mehrere Empfänger:innen durch <code>;</code> getrennt</li>
                     <li>gegebenenfalls ergänzen um <code>_e</code> / <code>_?</code> für erschlossene oder unsichere Angaben</li>
+                    <li>Personen, die als zusätzliche Empfänger am Brief vermerkt sind, werden mit dem Zusatz <code>_CC</code> aufgenommen</li>
+                    <li>Personen, die in Zustellanweisungen wie <q>c/o</q> oder <q>p.Adr.</q> genannt werden, werden mit dem Zusatz <code>_CO</code> aufgenommen <br/><em class="small">(gilt NICHT für Angabe von Arbeitsplätzen der Empfänger!)</em></li>
                     <li>Ergänzungen und eindeutige Korrekturen in <a href="https://docs.google.com/spreadsheets/d/1NkFCGoL7BsX8rq_8kZqVzWvC_vq43WoyrJ0Z0w2XoiE/edit?usp=sharing">p_ids</a> ; neue Namen oder unsichere Änderungen im Mattermost-channel <a href="https://mattermost.gitlab.rlp.net/bkd/channels/namensanderungen">"Namensänderungen"</a></li>
                 </ul>
                 <p class="x-small right">
@@ -751,6 +753,7 @@
                 <h2 class="red">L - receiver_org</h2>
                 <ul class="line-height-one-five">
                     <li>nur Organisationen, die auch als Empfänger adressiert werden</li>
+                    <li>Organisationen, die in Zustellanweisungen wie <q>c/o</q> oder <q>p.Adr.</q> genannt werden, werden mit dem Zusatz <code>_CO</code> aufgenommen <br/><em class="small">(gilt NICHT für Angabe von Arbeitsplätzen der Empfänger!)</em></li>
                     <li>Organisationen, die nicht im Drop-Down hinterlegt sind: Erfassung nach Vorlage, die Einträge werden später nachbearbeitet und systematisiert</li>
                 </ul>
                 <p class="x-small right">
